@@ -1,4 +1,1 @@
-# Sistemas-Operativos-1
-# Sistemas-Operativos-1
-# Sistemas-Operativos-1
-# Sistemas-Operativos-1
+Carpeta de la materia Sistemas operativos 1 
