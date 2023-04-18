@@ -1,0 +1,30 @@
+1)  Los componentes que trae esta versión de xinu son:
+        - Kernel
+        - Controladores de dispositivos
+        - Gestión de procesos 
+        - Gestión de la memoria
+        - Sistema de entrada y salida
+        - Interfaz de usuario 
+        
+    Los periféricos que son accesibles a traves de qemu son:
+        - Teclado y mouse
+        - Pantalla y consola
+        - Puerto serial, en donde podemos acceder a otro teclado, mouse y pantalla
+        
+    Se accede al puerto serie de la pc en QEMU presionando ctrl + alt + 3.
+    
+    Existen 5 procesos en ejecución, se obtienen ingresando el comando ps en la terminal
+
+9)  La tabla de procesos en xinu tiene los siguientes campos:
+        - uint16  prstate;        /* El estado del proceso                  */
+        - pri16   prprio;         /* La prioridad del proceso               */
+        - char    *prstkptr;      /* El puntero al stack guardado           */
+        - char    *prstkbase;     /* El tiempo de ejecucion en el stack     */
+        - uint32  prstklen;       /* La longitud del stack en bytes         */
+        - char    prname[PNMLEN]; /* El nombre del proceso                  */
+        - sid32   prsem;          /* El semaforo en donde el proceso espera */
+        - pid32   prparent;       /* El ID del proceso padre (o el que creo al proceso)          */
+        - umsg32  prmsg;          /* Mensaje mandado a este proceso         */
+        - bool8   prhasmsg;       /* Distinto de cero si el msj es valido   */
+        - int16   prdesc[NDESC];  /* Descriptores de dispositivo para el proceso      */
+    
